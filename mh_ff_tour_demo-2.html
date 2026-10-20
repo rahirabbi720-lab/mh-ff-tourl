@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#10131b">
+<title>MH FF TOUR | Free Fire Tournament</title>
+<style>
+:root{--bg:#0b0e14;--panel:#151a24;--panel2:#1d2431;--orange:#ff8a24;--yellow:#ffc15a;--text:#f5f7fb;--muted:#a8b1c2;--line:#2a3242;--green:#3bd18b}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Noto Sans Bengali",sans-serif}button,input,select{font:inherit}button{cursor:pointer}.app{max-width:520px;margin:auto;min-height:100vh;padding-bottom:82px;background:linear-gradient(180deg,#111722 0,#0b0e14 340px)}
+header{display:flex;align-items:center;gap:11px;padding:17px 16px;position:sticky;top:0;z-index:5;background:#10141df2;border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}.brandmark{width:46px;height:46px;border-radius:14px;background:linear-gradient(135deg,var(--yellow),var(--orange));color:#19130c;display:grid;place-items:center;font-weight:1000;font-size:15px;box-shadow:0 5px 20px #ff8a2433}.brand{font-weight:950;font-size:19px;letter-spacing:.6px}.subtitle{font-size:10px;color:var(--muted);letter-spacing:1.4px}.headbtn{margin-left:auto;border:1px solid var(--line);background:var(--panel);color:white;border-radius:12px;width:42px;height:42px;font-size:19px}
+main{padding:16px}.hero{position:relative;overflow:hidden;border:1px solid #55391f;border-radius:22px;padding:22px 18px;background:radial-gradient(circle at 100% 0,#713d19 0,transparent 45%),linear-gradient(135deg,#25202a,#151a24 70%);min-height:190px}.eyebrow{color:var(--yellow);font-size:11px;font-weight:800;letter-spacing:1.5px}.hero h1{font-size:29px;line-height:1.15;margin:10px 0 8px;max-width:290px}.hero p{font-size:13px;color:#c3cad6;margin:0 0 17px;max-width:270px}.primary{border:0;background:linear-gradient(135deg,var(--yellow),var(--orange));color:#1b130b;font-weight:900;padding:11px 15px;border-radius:11px}.hero-art{position:absolute;right:-14px;bottom:12px;font-size:94px;filter:drop-shadow(0 8px 12px #0008);opacity:.9}
+.wallet{margin-top:15px;background:linear-gradient(135deg,#202a3a,#151a24);border:1px solid #313b4d;border-radius:18px;padding:17px}.wallet-top{display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:12px}.balance{font-size:29px;font-weight:900;margin:6px 0 14px}.actions{display:flex;gap:9px}.secondary{border:1px solid var(--line);background:#202837;color:white;border-radius:10px;padding:9px 12px;font-weight:700}.section-head{display:flex;align-items:center;justify-content:space-between;margin:24px 0 12px}.section-head h2{font-size:18px;margin:0}.smallmuted{font-size:12px;color:var(--muted)}.modes{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.mode{border:1px solid var(--line);background:var(--panel);color:white;border-radius:14px;padding:13px 5px;text-align:center}.mode .emoji{font-size:24px;display:block;margin-bottom:5px}.mode strong{font-size:13px}.mode.active{border-color:var(--orange);background:#392719}
+.matches{display:grid;gap:12px}.match{border:1px solid var(--line);border-radius:17px;overflow:hidden;background:var(--panel)}.matchbanner{height:92px;padding:13px 15px;background:radial-gradient(circle at 90% 10%,#81451c,transparent 42%),linear-gradient(110deg,#242c3a,#191d27);display:flex;align-items:center;justify-content:space-between}.matchtype{font-size:11px;color:var(--yellow);font-weight:900;letter-spacing:1px}.matchtitle{font-size:19px;font-weight:900;margin-top:3px}.badge{font-size:10px;padding:6px 8px;border-radius:8px;background:#163c30;color:#6ef0b5;font-weight:800}.matchbody{padding:14px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:13px}.stat{background:#1d2431;border-radius:10px;padding:9px}.stat span{display:block;color:var(--muted);font-size:10px}.stat b{font-size:14px}.matchfoot{display:flex;align-items:center;justify-content:space-between;gap:10px}.book{border:0;background:var(--orange);color:#17110a;border-radius:10px;padding:10px 13px;font-weight:900}.book:disabled{opacity:.45;cursor:not-allowed}.empty{color:var(--muted);font-size:13px;padding:18px;text-align:center;border:1px dashed var(--line);border-radius:14px}
+.page{display:none}.page.active{display:block}.formcard{background:var(--panel);border:1px solid var(--line);padding:16px;border-radius:16px;margin-bottom:13px}.formcard h3{margin:0 0 12px}.field{display:block;font-size:12px;color:var(--muted);margin:12px 0 6px}.control{width:100%;padding:12px;border-radius:10px;border:1px solid var(--line);background:#0f141d;color:white;outline:none}.control:focus{border-color:var(--orange)}.wide{width:100%;margin-top:12px}.notice{font-size:12px;line-height:1.6;color:var(--muted);background:#1d2431;border-radius:12px;padding:12px}.listrow{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid var(--line);font-size:13px}.listrow:last-child{border-bottom:0}.good{color:var(--green)}.bottomnav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:min(520px,100%);display:grid;grid-template-columns:repeat(4,1fr);background:#111620f5;border-top:1px solid var(--line);padding:8px 6px calc(8px + env(safe-area-inset-bottom));z-index:8;backdrop-filter:blur(14px)}.navbtn{border:0;background:transparent;color:var(--muted);font-size:10px;padding:5px 0}.navbtn span{display:block;font-size:20px;margin-bottom:3px}.navbtn.active{color:var(--yellow);font-weight:900}
+dialog{width:calc(100% - 32px);max-width:440px;border:1px solid #414b5d;border-radius:18px;background:#151a24;color:white;padding:20px}dialog::backdrop{background:#000a;backdrop-filter:blur(4px)}.dialoghead{display:flex;justify-content:space-between;align-items:center}.xbtn{background:#293140;color:white;border:0;border-radius:9px;padding:7px 11px}.toast{position:fixed;bottom:88px;left:50%;transform:translateX(-50%);background:#effff6;color:#10251a;padding:12px 16px;border-radius:12px;box-shadow:0 5px 22px #0007;z-index:20;font-weight:800;font-size:13px;width:max-content;max-width:90%;display:none}.footer{text-align:center;color:#687386;font-size:10px;padding:22px 0 10px}
+</style>
+</head>
+<body>
+<div class="app">
+<header>
+  <div class="brandmark">MH<br>FF</div>
+  <div><div class="brand">MH FF TOUR</div><div class="subtitle">FREE FIRE TOURNAMENT</div></div>
+  <button class="headbtn" onclick="showPage('profile')" aria-label="Profile">♙</button>
+</header>
+<main>
+<section id="homePage" class="page active">
+  <div class="hero">
+    <div class="eyebrow">🔥 YOUR BATTLE STARTS HERE</div>
+    <h1>PLAY TO WIN.<br>RISE TO THE TOP.</h1>
+    <p>তোমার স্কোয়াড তৈরি করো, স্লট বুক করো, মাঠে নামো!</p>
+    <button class="primary" onclick="document.getElementById('matchSection').scrollIntoView({behavior:'smooth'})">ম্যাচ দেখো ↘</button>
+    <div class="hero-art" aria-hidden="true">🏆</div>
+  </div>
+  <div class="wallet">
+    <div class="wallet-top"><span>💳 DEMO WALLET BALANCE</span><span>● Demo</span></div>
+    <div class="balance" id="balance">৳ 100.00</div>
+    <div class="actions"><button class="primary" onclick="showPage('wallet')">＋ Add Money</button><button class="secondary" onclick="showPage('history')">↻ History</button></div>
+  </div>
+  <div class="section-head"><h2>গেম মোড</h2><span class="smallmuted">তোমার পছন্দ বেছে নাও</span></div>
+  <div class="modes">
+    <button class="mode active" data-mode="All" onclick="setMode('All',this)"><span class="emoji">🎯</span><strong>সব ম্যাচ</strong></button>
+    <button class="mode" data-mode="Solo" onclick="setMode('Solo',this)"><span class="emoji">👤</span><strong>Solo</strong></button>
+    <button class="mode" data-mode="Duo" onclick="setMode('Duo',this)"><span class="emoji">👥</span><strong>Duo</strong></button>
+    <button class="mode" data-mode="Squad" onclick="setMode('Squad',this)"><span class="emoji">🛡️</span><strong>Squad</strong></button>
+  </div>
+  <div id="matchSection" class="section-head"><h2>🏆 Upcoming Matches</h2><span class="smallmuted">Demo list</span></div>
+  <div id="matches" class="matches"></div>
+  <div class="footer">MH FF TOUR • Unofficial community tournament demo</div>
+</section>
+
+<section id="walletPage" class="page">
+  <div class="section-head"><h2>💳 আমার Wallet</h2><span class="smallmuted">DEMO MODE</span></div>
+  <div class="formcard"><div class="smallmuted">বর্তমান ডেমো ব্যালেন্স</div><div class="balance" id="walletBalance">৳ 100.00</div><div class="notice">এখানে কোনো আসল টাকা জমা হয় না। বিকাশ/নগদের আসল পেমেন্ট চালু করতে অনুমোদিত মার্চেন্ট/গেটওয়ে ও নিরাপদ সার্ভার দরকার।</div></div>
+  <div class="formcard"><h3>ডেমো ব্যালেন্স যোগ করো</h3><label class="field" for="addAmount">পরিমাণ (৳)</label><input id="addAmount" class="control" type="number" min="1" max="10000" placeholder="যেমন 100"><button class="primary wide" onclick="addDemoMoney()">ডেমো টাকা যোগ করো</button></div>
+  <div class="formcard"><h3>পেমেন্ট মেথড (পরবর্তী ধাপে)</h3><div class="listrow"><span>🩷 বিকাশ Merchant</span><span class="smallmuted">Not connected</span></div><div class="listrow"><span>🟠 নগদ Merchant</span><span class="smallmuted">Not connected</span></div></div>
+</section>
+
+<section id="historyPage" class="page">
+  <div class="section-head"><h2>📜 লেনদেন ও বুকিং</h2></div>
+  <div class="formcard" id="historyList"><div class="smallmuted">এখনো কোনো ডেমো লেনদেন নেই।</div></div>
+  <div class="notice">এই হিস্ট্রি শুধু এই ডেমো পেজে থাকে। পেজ রিফ্রেশ করলে ডেমো ডেটা মুছে যাবে। বাস্তব সিস্টেমে ডেটাবেস দরকার।</div>
+</section>
+
+<section id="profilePage" class="page">
+  <div class="section-head"><h2>👤 Player Profile</h2></div>
+  <div class="formcard"><h3>তোমার তথ্য</h3><label class="field" for="playerName">প্লেয়ার নাম</label><input id="playerName" class="control" placeholder="তোমার গেমিং নাম"><label class="field" for="playerUid">Free Fire UID</label><input id="playerUid" class="control" inputmode="numeric" placeholder="তোমার FF UID"><button class="primary wide" onclick="saveProfile()">প্রোফাইল সেভ করো</button></div>
+  <div class="formcard"><h3>আমার বুকিং</h3><div id="myBookings" class="smallmuted">এখনো কোনো বুকিং নেই।</div></div>
+</section>
+</main>
+<nav class="bottomnav">
+<button class="navbtn active" data-page="home" onclick="showPage('home')"><span>⌂</span>হোম</button>
+<button class="navbtn" data-page="matches" onclick="showPage('matches')"><span>🏆</span>ম্যাচ</button>
+<button class="navbtn" data-page="wallet" onclick="showPage('wallet')"><span>▣</span>ওয়ালেট</button>
+<button class="navbtn" data-page="profile" onclick="showPage('profile')"><span>♙</span>প্রোফাইল</button>
+</nav>
+</div>
+
+<dialog id="bookingDialog">
+  <div class="dialoghead"><h3 id="dialogTitle">ম্যাচ বুক করো</h3><button class="xbtn" onclick="closeBooking()">✕</button></div>
+  <div id="dialogDetails" class="notice"></div>
+  <label class="field" for="bookingUid">Free Fire UID</label><input id="bookingUid" class="control" inputmode="numeric" placeholder="তোমার FF UID">
+  <label class="field" for="bookingName">প্লেয়ার / টিমের নাম</label><input id="bookingName" class="control" placeholder="গেমের নাম">
+  <button class="primary wide" onclick="confirmBooking()">ডেমো স্লট বুক করো</button>
+  <p class="smallmuted">ডেমো বুকিংয়ে শুধু পরীক্ষামূলক ব্যালেন্স কাটা হবে।</p>
+</dialog>
+<div id="toast" class="toast" role="status"></div>
+<script>
+const initialBalance = 100;
+let balance = initialBalance, mode = 'All', selectedMatch = null;
+const bookings = [], transactions = [];
+const matches = [
+ {id:1,mode:'Solo',title:'Solo Clash',fee:10,prize:100,total:48,booked:19,time:'আজ • ৮:০০ PM'},
+ {id:2,mode:'Duo',title:'Duo Showdown',fee:20,prize:200,total:24,booked:8,time:'আজ • ৯:০০ PM'},
+ {id:3,mode:'Squad',title:'Squad War',fee:40,prize:500,total:12,booked:4,time:'আগামীকাল • ৭:৩০ PM'},
+ {id:4,mode:'Solo',title:'Solo Night Cup',fee:15,prize:150,total:48,booked:32,time:'আগামীকাল • ৯:০০ PM'}
+];
+const taka=n=>'৳ '+Number(n).toFixed(2);
+function renderMatches(){
+ const list=document.getElementById('matches');
+ const shown=matches.filter(m=>mode==='All'||m.mode===mode);
+ if(!shown.length){list.innerHTML='<div class="empty">এই মোডে এখন কোনো ম্যাচ নেই।</div>';return}
+ list.innerHTML=shown.map(m=>`<article class="match"><div class="matchbanner"><div><div class="matchtype">${m.mode.toUpperCase()} TOURNAMENT</div><div class="matchtitle">${m.title}</div></div><span class="badge">● Registration Open</span></div><div class="matchbody"><div class="stats"><div class="stat"><span>ENTRY FEE</span><b>${taka(m.fee)}</b></div><div class="stat"><span>PRIZE POOL</span><b>${taka(m.prize)}</b></div><div class="stat"><span>AVAILABLE</span><b>${Math.max(0,m.total-m.booked)}/${m.total}</b></div></div><div class="matchfoot"><div><b>${m.time}</b><div class="smallmuted">Booked ${m.booked} slots</div></div><button class="book" ${m.booked>=m.total?'disabled':''} onclick="openBooking(${m.id})">স্লট বুক ↗</button></div></div></article>`).join('');
+}
+function setMode(newMode,el){mode=newMode;document.querySelectorAll('.mode').forEach(b=>b.classList.toggle('active',b===el));renderMatches()}
+function showPage(name){
+ const actual=name==='matches'?'home':name;
+ document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+ const target=document.getElementById(actual+'Page');if(target)target.classList.add('active');
+ document.querySelectorAll('.navbtn').forEach(b=>b.classList.toggle('active',b.dataset.page===name || (name==='matches'&&b.dataset.page==='matches')));
+ if(name==='matches'){document.getElementById('matchSection').scrollIntoView({behavior:'smooth'})}
+ if(name==='wallet'){document.getElementById('walletBalance').textContent=taka(balance)}
+ if(name==='profile')renderBookings();
+ if(name==='history')renderHistory();
+ window.scrollTo({top:0,behavior:'smooth'});
+}
+function openBooking(id){
+ selectedMatch=matches.find(m=>m.id===id);if(!selectedMatch)return;
+ document.getElementById('dialogTitle').textContent=selectedMatch.title;
+ document.getElementById('dialogDetails').innerHTML=`<b>${selectedMatch.mode}</b> • এন্ট্রি ফি <b>${taka(selectedMatch.fee)}</b><br>পুরস্কার: ${taka(selectedMatch.prize)}<br>তোমার ডেমো ব্যালেন্স: ${taka(balance)}`;
+ document.getElementById('bookingName').value=document.getElementById('playerName').value||'';
+ document.getElementById('bookingUid').value=document.getElementById('playerUid').value||'';
+ document.getElementById('bookingDialog').showModal();
+}
+function closeBooking(){document.getElementById('bookingDialog').close()}
+function confirmBooking(){
+ if(!selectedMatch)return;
+ const uid=document.getElementById('bookingUid').value.trim(),name=document.getElementById('bookingName').value.trim();
+ if(!uid||!name){toast('প্লেয়ার নাম ও UID লিখো।');return}
+ if(!/^\d{5,15}$/.test(uid)){toast('সঠিক FF UID দাও (৫–১৫টি সংখ্যা)।');return}
+ if(bookings.some(b=>b.matchId===selectedMatch.id&&b.uid===uid)){toast('এই UID দিয়ে এই ম্যাচে বুকিং আছে।');return}
+ if(selectedMatch.booked>=selectedMatch.total){toast('দুঃখিত, স্লট শেষ।');return}
+ if(balance<selectedMatch.fee){toast('ব্যালেন্স কম। Wallet থেকে ডেমো ব্যালেন্স যোগ করো।');return}
+ balance-=selectedMatch.fee;selectedMatch.booked++;
+ bookings.push({matchId:selectedMatch.id,title:selectedMatch.title,mode:selectedMatch.mode,fee:selectedMatch.fee,uid,name});
+ transactions.unshift({type:'Booking fee',amount:-selectedMatch.fee,detail:selectedMatch.title});
+ updateBalance();renderMatches();renderBookings();renderHistory();closeBooking();toast('ডেমো স্লট বুক হয়েছে! এন্ট্রি ফি কাটা হয়েছে।');
+}
+function updateBalance(){document.getElementById('balance').textContent=taka(balance);document.getElementById('walletBalance').textContent=taka(balance)}
+function addDemoMoney(){
+ const input=document.getElementById('addAmount'),amount=Number(input.value);
+ if(!Number.isFinite(amount)||amount<=0||amount>10000){toast('১ থেকে ১০,০০০ টাকার মধ্যে পরিমাণ দাও।');return}
+ balance+=amount;transactions.unshift({type:'Demo top-up',amount,detail:'পরীক্ষামূলক ব্যালেন্স'});input.value='';updateBalance();renderHistory();toast(taka(amount)+' ডেমো ব্যালেন্স যোগ হয়েছে।');
+}
+function renderHistory(){
+ const el=document.getElementById('historyList');
+ if(!transactions.length){el.innerHTML='<div class="smallmuted">এখনো কোনো ডেমো লেনদেন নেই।</div>';return}
+ el.innerHTML=transactions.map(t=>`<div class="listrow"><div><b>${t.type}</b><div class="smallmuted">${t.detail}</div></div><b class="${t.amount>0?'good':''}">${t.amount>0?'+':''}${taka(t.amount)}</b></div>`).join('');
+}
+function renderBookings(){
+ const el=document.getElementById('myBookings');
+ if(!bookings.length){el.textContent='এখনো কোনো বুকিং নেই।';return}
+ el.innerHTML=bookings.map(b=>`<div class="listrow"><div><b>${b.title}</b><div class="smallmuted">${b.mode} • UID ${b.uid}</div></div><div><b>${taka(b.fee)}</b><div class="good">Booked (Demo)</div></div></div>`).join('');
+}
+function saveProfile(){toast('প্রোফাইল এই ডেমো সেশনে ব্যবহার হবে।')}
+let toastTimer;
+function toast(msg){const el=document.getElementById('toast');el.textContent=msg;el.style.display='block';clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.style.display='none',2600)}
+renderMatches();updateBalance();
+</script>
+</body>
+</html>
